@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Mood Disorder Questionnaire - Bipolar UK
         </a>
       </header>
     </div>
