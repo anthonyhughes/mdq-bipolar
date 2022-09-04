@@ -1,7 +1,6 @@
 import './App.css';
-import {createContext, useContext, useState} from "react";
+import {useState} from "react";
 import Questionnaire from "./pages/Questionnaire";
-import Results from "./pages/Results";
 import AllQuestionAnswersContext from "./contexts/AllQuestionAnswersContext"
 
 function App() {

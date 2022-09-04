@@ -15,25 +15,28 @@
 
 
 .App-header {
-    background-color: #282c34;
+    background-color: #0690e6;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 3vmin);
+    font-weight: 400;
     color: white;
 }
 
 .App-body {
-    background-color: #414550;
+    background-color: #f6f8f8;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: black;
 }
 
 .App-body-questions {
@@ -43,7 +46,18 @@
 }
 
 .App-body-title {
-    padding: 20px;
+    padding-top: 3vh;
+}
+
+.App-body-slider {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.App-body-slider-text {
+    font-weight: 400;
+    line-height: 1.45;
+    font-size: 1.25rem;
 }
 
 .App-link {
@@ -71,17 +85,46 @@
 }
 
 .AnswerCardContent {
-    background-color: #dce3e3;
+    background-color: #f6f8f8;
     padding: 10px;
-    color: white;
+    color: #0690e6;
+    font-weight: 400;
+    line-height: 1.45;
+    font-size: 1.25rem;
 }
 
 .AnswerCardContent-selected {
     background-color: #b6bdbd;
     padding: 10px;
-    color: white;
+    color: #0690e6;
+    font-weight: 400;
+    line-height: 1.45;
+    font-size: 1.25rem;
 }
 
 .AnswerCardContent:hover {
     background-color: #b6bdbd;
+}
+
+.Question {
+    padding-top: 3vh;
+}
+
+.Question-title {
+    padding-top: 3vh;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.Question-subtitle {
+    padding: 2vh;
+    font-weight: 400;
+    line-height: 1.45;
+    font-size: 1.25rem;
+}
+
+.appHr {
+    border: 2px solid red;
+    margin-left: 320px;
+    margin-right: 320px;
 }

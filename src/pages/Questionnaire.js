@@ -34,18 +34,17 @@ function Questionnaire() {
             <div className="App">
                 <header className="App-header">
                     <p>
-                        Mood disorder questionnaire - bipolar UK
+                        take our quick bipolar test
                     </p>
                 </header>
                 <div className="App-body">
-                    <div className="App-body-title">
-                        Take our quick bipolar test
-                    </div>
+                    <div className="App-body-title"/>
                     <div className="App-body-container">
                         <div className="App-body-questions">
                             <ArrowBackIosIcon
                                 color={(currentQuestion === 1) ? "disabled" : "primary"}
                                 onClick={handleBackArrowClick}
+                                sx={{fontSize: 60}}
                             />
                             {Questions
                                 .filter((question, index) => index + 1 === currentQuestion)
@@ -66,10 +65,14 @@ function Questionnaire() {
                                     ? "primary"
                                     : "disabled"}
                                 onClick={handleForwardArrowClick}
+                                sx={{fontSize: 60}}
                             />
                         </div>
                         <div className="App-body-slider">
                             <ProgressSlider value={currentQuestion}/>
+                            <div className={"App-body-slider-text"}>
+                                Question {currentQuestion} of 11
+                            </div>
                         </div>
                     </div>
                 </div>

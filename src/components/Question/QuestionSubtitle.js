@@ -1,10 +1,8 @@
-import {Typography} from "@mui/material";
-
 function QuestionSubtitle({subtitle}) {
     return (
-        <Typography variant="body2" color="text.secondary">
+        <h2 className={"Question-subtitle"}>
             {subtitle}
-        </Typography>
+        </h2>
     );
 }
 
