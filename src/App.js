@@ -1,25 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
+import Questionnaire from "./pages/Questionnaire";
+import Results from "./pages/Results";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Mood Disorder Questionnaire - Bipolar UK
-        </a>
-      </header>
-    </div>
-  );
+    const [questionnaireCompleted, setQuestionnaireCompleted] = useState(false)
+
+    return questionnaireCompleted ? (<Results/>) : (<Questionnaire/>);
 }
 
 export default App;
