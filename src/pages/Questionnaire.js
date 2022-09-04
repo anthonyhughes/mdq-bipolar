@@ -30,7 +30,7 @@ function Questionnaire() {
     }
 
     return (Object.keys(allQuestionAnswers).length === 11 ?
-            <Results allQuestionAnswers={allQuestionAnswers}/> :
+            <Results /> :
             <div className="App">
                 <header className="App-header">
                     <p>
