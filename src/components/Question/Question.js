@@ -3,7 +3,7 @@ import QuestionSubtitle from "./QuestionSubtitle";
 import Answers from "./Answers";
 import {Card, CardContent} from "@mui/material";
 
-function Question({title, subtitle, answers, handleAnswerClick, questionId, allQuestionAnswers}) {
+function Question({title, subtitle, answers, handleAnswerClick, questionId}) {
     return (
         <div className="Question">
             <Card variant="outlined">
@@ -14,7 +14,6 @@ function Question({title, subtitle, answers, handleAnswerClick, questionId, allQ
                         answers={answers}
                         handleAnswerClick={handleAnswerClick}
                         questionId={questionId}
-                        allQuestionAnswers={allQuestionAnswers}
                     />
                 </CardContent>
             </Card>

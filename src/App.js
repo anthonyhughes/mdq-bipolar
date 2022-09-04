@@ -1,12 +1,17 @@
 import './App.css';
-import {useState} from "react";
+import {createContext, useContext, useState} from "react";
 import Questionnaire from "./pages/Questionnaire";
 import Results from "./pages/Results";
+import AllQuestionAnswersContext from "./contexts/AllQuestionAnswersContext"
 
 function App() {
-    const [questionnaireCompleted, setQuestionnaireCompleted] = useState(false)
+    const [allQuestionAnswers, setAllQuestionAnswers] = useState({});
 
-    return questionnaireCompleted ? (<Results/>) : (<Questionnaire/>);
+    return (
+        <AllQuestionAnswersContext.Provider value={{allQuestionAnswers, setAllQuestionAnswers}}>
+            <Questionnaire/>
+        </AllQuestionAnswersContext.Provider>
+    )
 }
 
 export default App;

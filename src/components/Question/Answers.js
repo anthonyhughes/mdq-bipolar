@@ -1,6 +1,6 @@
 import Answer from "./Answer";
 
-function Answers({answers, handleAnswerClick, questionId, allQuestionAnswers}) {
+function Answers({answers, handleAnswerClick, questionId}) {
     return (
         <div className={"Answers"}> {
             answers.map((answer, index) => {
@@ -11,7 +11,6 @@ function Answers({answers, handleAnswerClick, questionId, allQuestionAnswers}) {
                         questionId={questionId}
                         answer={answer}
                         handleAnswerClick={handleAnswerClick}
-                        allQuestionAnswers={allQuestionAnswers}
                     />
                 )
             })}
