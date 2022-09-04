@@ -33,8 +33,8 @@
     min-height: 10vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: black;
 }
@@ -43,6 +43,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .App-body-title {
@@ -56,8 +57,15 @@
 
 .App-body-slider-text {
     font-weight: 400;
+    font-size: 1rem;
+}
+
+.App-body-blurb {
+    inline-size: 100vh;
+    font-weight: 400;
     line-height: 1.45;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    overflow: hidden;
 }
 
 .App-link {
@@ -108,6 +116,7 @@
 
 .Question {
     padding-top: 3vh;
+    width: 80vh;
 }
 
 .Question-title {
