@@ -43,8 +43,10 @@
 }
 
 .App-results-subtitle {
+    padding-top: 0.5vh;
     font-size: calc(4px + 1vmin);
-    font-weight: 200;
+    font-weight: 250;
+    font-size: 1.25rem;
     color: white;
 }
 
@@ -77,6 +79,17 @@
     justify-content: space-between;
 }
 
+.App-results-body-title {
+    font-size: 2.5rem;
+    font-family: urw geometric w05 extra bold, sans-serif;
+    font-weight: 700;
+}
+
+.App-results-body-subtitle {
+    padding-top: 3vh;
+    font-size: 1.5rem;
+}
+
 .App-body-title {
     padding-top: 3vh;
 }
@@ -88,7 +101,7 @@
 
 .App-body-slider-text {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .App-body-blurb {
@@ -99,18 +112,26 @@
     overflow: hidden;
 }
 
+.App-results-spectrum-answer {
+    inline-size: 100vh;
+    font-weight: 400;
+    line-height: 1.45;
+    font-size: 1.2rem;
+}
+
+.App-results-spectrum-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 1vh;
+}
+
 .App-link {
     color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+/**/
 
 .Answers {
     display: flex;
@@ -133,7 +154,7 @@
 }
 
 .AnswerCardContent-selected {
-    background-color: #b6bdbd;
+    background-color: #e0e7e7;
     padding: 10px;
     color: #0690e6;
     font-weight: 400;
@@ -141,8 +162,10 @@
     font-size: 1.25rem;
 }
 
+/**/
+
 .AnswerCardContent:hover {
-    background-color: #b6bdbd;
+    background-color: #e0e7e7;
 }
 
 .Question {
@@ -167,4 +190,16 @@
     border: 2px solid red;
     margin-left: 320px;
     margin-right: 320px;
+}
+
+.appVr {
+    border-left:1px solid #000;
+    height:100px
+}
+
+.App-retake-text {
+    text-align: left;
+    padding-top: 2vh;
+    text-decoration: underline;
+    cursor: pointer;
 }
