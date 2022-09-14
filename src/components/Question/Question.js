@@ -8,7 +8,7 @@ function Question({title, subtitle, answers, handleAnswerClick, questionId, ques
     return (
         <div className="Question">
             <Box sx={{boxShadow: 5}}>
-                <Card>
+                <Card sx={{ minWidth: 275 }}>
                     <CardContent>
                         <QuestionTitle title={title}/>
                         <QuestionSubtitle subtitle={subtitle}/>

@@ -2,19 +2,32 @@ import '../App.css';
 import {spectrum} from "../resources/Spectrum";
 import {useContext} from "react";
 import AllQuestionAnswersContext from "../contexts/AllQuestionAnswersContext";
-import ProgressSlider from "../components/ProgressSlider";
+import VerifiedIcon from '@mui/icons-material/Verified';
+import CancelIcon from '@mui/icons-material/Cancel';
+
+const ICON_THEME = {
+    fontSize: 120,
+    color: "#0690e6",
+    flexWrap: 'wrap',
+    paddingBottom: '2%',
+    animation: "fadeIn 3s linear",
+    "@keyframes fadeIn": {
+        "0%": {
+            opacity: 0
+        },
+        "100%": {
+            opacity: 1
+        },
+    },
+}
 
 const calculateSpectrum = (allQuestionAnswers) => {
-    console.log(allQuestionAnswers)
     const countOfYesAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 0).length;
-    const countOfNoAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 1).length;
-    console.log('yes', countOfYesAnswers)
-    console.log('no', countOfNoAnswers)
+    // const countOfNoAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 1).length;
     const periodAnswer = allQuestionAnswers[14];
     const severityAnswer = allQuestionAnswers[15];
-    const familyAnswer = allQuestionAnswers[16];
-    const previousDiagnosisAnswer = allQuestionAnswers[17];
-    console.log(countOfYesAnswers, periodAnswer, severityAnswer, familyAnswer, previousDiagnosisAnswer)
+    // const familyAnswer = allQuestionAnswers[16];
+    // const previousDiagnosisAnswer = allQuestionAnswers[17];
     if (countOfYesAnswers >= 7 && periodAnswer === 0 && severityAnswer >= 2) {
         return {
             spectrumResult: 1, // possible
@@ -44,20 +57,25 @@ function Results({setCurrentQuestion}) {
             <div className="App">
                 <div className={"App-results"}>
                     <p>
-                        these results indicate that...
+                        thank you for completing the mood disorder questionnaire
                     </p>
                     <h1>
                         {spectrumSelection.subtitle}
                     </h1>
                     <div className="App-body-slider">
-                        <ProgressSlider value={countOfYesAnswers} min={0} max={18}/>
-                        <div className="App-results-spectrum-text">
-                            <div className="appVr"/>
-                            <p className={"App-body-slider-text"}>
-                                above is a count of your selected indicators that may contribute towards the bipolar spectrum
-                            </p>
-                            <div className="appVr"/>
-                        </div>
+                        {spectrumResult === 0 ?
+                            <CancelIcon
+                                sx={ICON_THEME}
+                            />
+                            :
+                            <VerifiedIcon
+                                sx={ICON_THEME}
+                            />
+                        }
+                        <div className={"appHr"} />
+                        <p className={"App-body-slider-text"}>
+                            you selected {countOfYesAnswers} indicator(s) that may contribute towards the bipolar spectrum
+                        </p>
                         <div className={"App-results-spectrum-answer"}>
                             <p>
                                 {spectrumSelection.answer}

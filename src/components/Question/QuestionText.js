@@ -1,8 +1,10 @@
 function QuestionText({question}) {
     return (
-        <p>
-            {question}
-        </p>
+        <div className={"Question-Text"}>
+            <h6>
+                {question}
+            </h6>
+        </div>
     );
 }
 
