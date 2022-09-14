@@ -4,18 +4,35 @@ import {useContext} from "react";
 import AllQuestionAnswersContext from "../contexts/AllQuestionAnswersContext";
 import ProgressSlider from "../components/ProgressSlider";
 
-const sum = (allQuestionAnswers) => {
-    let final = 0;
-    Object.values(allQuestionAnswers).forEach((res) => final += res);
-    return final;
+const calculateSpectrum = (allQuestionAnswers) => {
+    console.log(allQuestionAnswers)
+    const countOfYesAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 0).length;
+    const countOfNoAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 1).length;
+    console.log('yes', countOfYesAnswers)
+    console.log('no', countOfNoAnswers)
+    const periodAnswer = allQuestionAnswers[14];
+    const severityAnswer = allQuestionAnswers[15];
+    const familyAnswer = allQuestionAnswers[16];
+    const previousDiagnosisAnswer = allQuestionAnswers[17];
+    console.log(countOfYesAnswers, periodAnswer, severityAnswer, familyAnswer, previousDiagnosisAnswer)
+    if (countOfYesAnswers >= 7 && periodAnswer === 0 && severityAnswer >= 2) {
+        return {
+            spectrumResult: 1, // possible
+            countOfYesAnswers
+        }
+    } else {
+        return {
+            spectrumResult: 0, // possible
+            countOfYesAnswers
+        }
+    }
 }
 
 function Results({setCurrentQuestion}) {
     const {allQuestionAnswers, setAllQuestionAnswers} = useContext(AllQuestionAnswersContext)
-    const resultCount = sum(allQuestionAnswers)
-    const spectrumSelection = spectrum.filter((level) => (
-        resultCount >= level.thresholdScore[0] && resultCount <= level.thresholdScore[1])
-    )[0]
+    const {spectrumResult, countOfYesAnswers} = calculateSpectrum(allQuestionAnswers)
+    const spectrumSelection = spectrum[spectrumResult]
+    console.log(spectrumSelection)
 
     const handleRetake = () => {
         setCurrentQuestion(1)
@@ -25,43 +42,27 @@ function Results({setCurrentQuestion}) {
     return (
         <div>
             <div className="App">
-                <header className="App-results-header">
-                    <p>
-                        mood questionnaire results
-                        <div className={"App-results-subtitle"}>
-                            The questions are based on an evidence-based screening tool but are indicative only and do not
-                            form a formal diagnosis
-                        </div>
-                    </p>
-                </header>
                 <div className={"App-results"}>
-                    <div className={"App-results-body-subtitle"}>
+                    <p>
                         these results indicate that...
-                    </div>
-                    <h1 className={"App-results-body-title"}>
+                    </p>
+                    <h1>
                         {spectrumSelection.subtitle}
                     </h1>
                     <div className="App-body-slider">
-                        <ProgressSlider value={resultCount} min={0} max={44}/>
+                        <ProgressSlider value={countOfYesAnswers} min={0} max={18}/>
                         <div className="App-results-spectrum-text">
-                            <div className={"App-body-slider-text"}>
-                                Bipolar unlikely
-                                (0 - 15)
-                            </div>
-                            <div className="appVr" />
-                            <div className={"App-body-slider-text"}>
-                                Possible bipolar / depression
-                                (16 - 24)
-                            </div>
-                            <div className="appVr" />
-                            <div className={"App-body-slider-text"}>
-                                Likely bipolar / depression
-                                (25 - 44)
-                            </div>
+                            <div className="appVr"/>
+                            <p className={"App-body-slider-text"}>
+                                above is a count of your selected indicators that may contribute towards the bipolar spectrum
+                            </p>
+                            <div className="appVr"/>
                         </div>
-                        <p className={"App-results-spectrum-answer"}>
-                            {spectrumSelection.answer}
-                        </p>
+                        <div className={"App-results-spectrum-answer"}>
+                            <p>
+                                {spectrumSelection.answer}
+                            </p>
+                        </div>
                         <p
                             className={"App-retake-text"}
                             onClick={(event) => handleRetake()}>

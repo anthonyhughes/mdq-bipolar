@@ -12,6 +12,7 @@ function ProgressSlider({value, min = 1, max = 11}) {
             value={value}
             sx={{
                 color: '#0690e6',
+                width: '75%',
             }}
         />
     );

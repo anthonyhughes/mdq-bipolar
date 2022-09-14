@@ -1,8 +1,8 @@
 function QuestionSubtitle({subtitle}) {
     return (
-        <h2 className={"Question-subtitle"}>
+        <h6>
             {subtitle}
-        </h2>
+        </h6>
     );
 }
 

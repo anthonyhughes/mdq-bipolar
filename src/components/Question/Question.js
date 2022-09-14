@@ -2,8 +2,9 @@ import QuestionTitle from "./QuestionTitle";
 import QuestionSubtitle from "./QuestionSubtitle";
 import Answers from "./Answers";
 import {Box, Card, CardContent} from "@mui/material";
+import QuestionText from "./QuestionText";
 
-function Question({title, subtitle, answers, handleAnswerClick, questionId}) {
+function Question({title, subtitle, answers, handleAnswerClick, questionId, question}) {
     return (
         <div className="Question">
             <Box sx={{boxShadow: 5}}>
@@ -11,6 +12,7 @@ function Question({title, subtitle, answers, handleAnswerClick, questionId}) {
                     <CardContent>
                         <QuestionTitle title={title}/>
                         <QuestionSubtitle subtitle={subtitle}/>
+                        <QuestionText question={question}/>
                         <Answers
                             answers={answers}
                             handleAnswerClick={handleAnswerClick}
