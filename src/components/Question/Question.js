@@ -8,11 +8,13 @@ function Question({title, subtitle, answers, handleAnswerClick, questionId, ques
     return (
         <div className="Question">
             <Box sx={{boxShadow: 5}}>
-                <Card sx={{ minWidth: 275 }}>
+                <Card className={"Question-Card"} sx={{}}>
                     <CardContent>
                         <QuestionTitle title={title}/>
-                        <QuestionSubtitle subtitle={subtitle}/>
-                        <QuestionText question={question}/>
+                        <div className={"Question-text-body"}>
+                            <QuestionSubtitle subtitle={subtitle}/>
+                            <QuestionText question={question}/>
+                        </div>
                         <Answers
                             answers={answers}
                             handleAnswerClick={handleAnswerClick}

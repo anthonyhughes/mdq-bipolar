@@ -40,13 +40,13 @@
 
 .App-body {
     background-color: #f6f8f8;
-    min-height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     font-size: calc(10px + 2vmin);
     color: black;
+    max-width: 100%;
 }
 
 .App-results {
@@ -58,6 +58,10 @@
     align-items: center;
     font-size: calc(10px + 2vmin);
     color: black;
+}
+
+.App-body-container {
+    max-width: 80%;
 }
 
 .App-body-questions {
@@ -85,6 +89,10 @@
 .App-body-slider {
     padding-top: 5vh;
     padding-bottom: 2vh;
+}
+
+.App-body-slider:hover {
+    cursor: pointer;
 }
 
 .App-body-slider-section {
@@ -133,6 +141,12 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 600px){
+    .Answers {
+        flex-direction: column;
+    }
+}
+
 .AnswerCard {
     margin: 10px;
 }
@@ -175,14 +189,14 @@
 }
 
 .appHr {
-    border: 2px solid red;
+    border: 2px solid rgb(245, 130, 28);
     margin-left: calc(100px + 5vmin);
     margin-right: calc(100px + 5vmin);
 }
 
 .appVr {
-    border-left:1px solid #000;
-    height:100px
+    border-left: 1px solid #000;
+    height: 100px
 }
 
 .App-retake-text {
@@ -194,4 +208,11 @@
 }
 
 .Question-Text {
+}
+
+.Question-text-body {
+}
+
+.Question-Card {
+    min-width: calc(80vw - 200px);
 }

@@ -7,7 +7,6 @@ import CancelIcon from '@mui/icons-material/Cancel';
 
 const ICON_THEME = {
     fontSize: 120,
-    color: "#0690e6",
     flexWrap: 'wrap',
     paddingBottom: '2%',
     animation: "fadeIn 3s linear",
@@ -19,6 +18,13 @@ const ICON_THEME = {
             opacity: 1
         },
     },
+}
+
+const generateTheme = (colour = "#F5821CFF") => {
+    return {
+        color: colour,
+        ...ICON_THEME
+    }
 }
 
 const calculateSpectrum = (allQuestionAnswers) => {
@@ -57,7 +63,7 @@ function Results({setCurrentQuestion}) {
             <div className="App">
                 <div className={"App-results"}>
                     <p>
-                        thank you for completing the mood disorder questionnaire
+                        Thank you for completing the mood disorder questionnaire
                     </p>
                     <h1>
                         {spectrumSelection.subtitle}
@@ -65,16 +71,21 @@ function Results({setCurrentQuestion}) {
                     <div className="App-body-slider">
                         {spectrumResult === 0 ?
                             <CancelIcon
-                                sx={ICON_THEME}
+                                sx={
+                                    generateTheme()
+                                }
                             />
                             :
                             <VerifiedIcon
-                                sx={ICON_THEME}
+                                sx={
+                                    generateTheme()
+                                }
                             />
                         }
-                        <div className={"appHr"} />
+                        <div className={"appHr"}/>
                         <p className={"App-body-slider-text"}>
-                            you selected {countOfYesAnswers} indicator(s) that may contribute towards the bipolar spectrum
+                            You selected {countOfYesAnswers} indicator(s) that may contribute towards the bipolar
+                            spectrum
                         </p>
                         <div className={"App-results-spectrum-answer"}>
                             <p>
@@ -84,7 +95,7 @@ function Results({setCurrentQuestion}) {
                         <p
                             className={"App-retake-text"}
                             onClick={(event) => handleRetake()}>
-                            Take the test again
+                            Take the Mood Disorder Questionnaire again
                         </p>
                     </div>
                 </div>

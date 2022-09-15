@@ -1,9 +1,9 @@
 function QuestionText({question}) {
     return (
         <div className={"Question-Text"}>
-            <h6>
+            <h5>
                 {question}
-            </h6>
+            </h5>
         </div>
     );
 }

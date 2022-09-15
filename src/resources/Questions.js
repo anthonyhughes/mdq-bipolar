@@ -15,7 +15,7 @@ export const Questions = [
         id: 1,
         section: 'section 1',
         title: 'question 1',
-        subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you felt so good or so hyper that other people thought you were not your ' +
             'normal self or you were so hyper that you got into trouble?',
         ynAnswers
@@ -24,8 +24,8 @@ export const Questions = [
         id: 2,
         section: 'section 1',
         title: 'question 2',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you were so irritable that you shouted at people or started fights or arguments?',
         ynAnswers
     },
@@ -33,8 +33,8 @@ export const Questions = [
         id: 3,
         section: 'section 1',
         title: 'question 3',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you felt much more self-confident than usual?',
         ynAnswers
     },
@@ -42,8 +42,8 @@ export const Questions = [
         id: 4,
         section: 'section 1',
         title: 'question 4',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you got much less sleep than usual and found you did not really miss it?',
         ynAnswers
     },
@@ -51,8 +51,8 @@ export const Questions = [
         id: 5,
         section: 'section 1',
         title: 'question 5',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you were much more talkative or spoke much faster than usual?',
         ynAnswers
     },
@@ -60,8 +60,8 @@ export const Questions = [
         id: 6,
         section: 'section 1',
         title: 'question 6',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'thoughts raced through your head or you could not slow your mind down?',
         ynAnswers
     },
@@ -69,8 +69,8 @@ export const Questions = [
         id: 7,
         section: 'section 1',
         title: 'question 7',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you were so easily distracted by things around you that you had trouble concentrating or staying on track?',
         ynAnswers
     },
@@ -78,8 +78,8 @@ export const Questions = [
         id: 8,
         section: 'section 1',
         title: 'question 8',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you had much more energy than usual?',
         ynAnswers
     },
@@ -87,8 +87,8 @@ export const Questions = [
         id: 9,
         section: 'section 1',
         title: 'question 9',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you were much more active or did many more things than usual?',
         ynAnswers
     },
@@ -96,8 +96,8 @@ export const Questions = [
         id: 10,
         section: 'section 1',
         title: 'question 10',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you were much more social or outgoing than usual, for example, ' +
             'you telephoned friends in the middle of the night?',
         ynAnswers
@@ -106,8 +106,8 @@ export const Questions = [
         id: 11,
         section: 'section 1',
         title: 'question 11',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you were much more interested in sex than usual?',
         ynAnswers
     },
@@ -115,8 +115,8 @@ export const Questions = [
         id: 12,
         section: 'section 1',
         title: 'question 12',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'you did things that were unusual for you or that other people might have ' +
             'thought were excessive, foolish, or risky?',
         ynAnswers
@@ -125,8 +125,8 @@ export const Questions = [
         id: 13,
         section: 'section 1',
         title: 'question 13',
-        subtitle: '',
-        // subtitle: 'has there ever been a period of time when you were not your usual self and...',
+        // subtitle: '',
+        subtitle: 'Has there ever been a period of time when you were not your usual self and...',
         question: 'spending money got you or your family into trouble?',
         ynAnswers
     },
@@ -148,7 +148,7 @@ export const Questions = [
         subtitle: '',
         // subtitle: 'how much of a problem did any of these cause you – like being unable to ' +
         //     'work; having family, money or legal troubles; getting into arguments or fights? ',
-        question: 'how much of a problem did any of these cause you – like being unable to ' +
+        question: 'How much of a problem did any of these cause you – like being unable to ' +
             'work; having family, money or legal troubles; getting into arguments or fights? ',
         answers
     },
@@ -159,7 +159,7 @@ export const Questions = [
         subtitle: '',
         // subtitle: 'have any of your blood relatives (i.e. children, siblings, parents, grandparents, aunts, uncles) ' +
         //     'had manic-depressive illness or bipolar disorder?',
-        question: 'have any of your blood relatives (i.e. children, siblings, parents, grandparents, aunts, uncles) ' +
+        question: 'Have any of your blood relatives (i.e. children, siblings, parents, grandparents, aunts, uncles) ' +
             'had manic-depressive illness or bipolar disorder?',
         ynAnswers
     },
@@ -168,8 +168,8 @@ export const Questions = [
         section: 'section 5',
         title: 'question 17',
         subtitle: '',
-        // subtitle: 'has a health professional ever told you that you have manic-depressive illness or bipolar disorder?',
-        question: 'has a health professional ever told you that you have manic-depressive illness or bipolar disorder?',
+        // subtitle: 'Has a health professional ever told you that you have manic-depressive illness or bipolar disorder?',
+        question: 'Has a health professional ever told you that you have manic-depressive illness or bipolar disorder?',
         ynAnswers
     }
 ]
