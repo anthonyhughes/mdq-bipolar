@@ -63,7 +63,7 @@ function Results({setCurrentQuestion}) {
             <div className="App">
                 <div className={"App-results"}>
                     <p>
-                        Thank you for completing the mood disorder questionnaire
+                        Thank you for completing the Mood Disorder Questionnaire
                     </p>
                     <h1>
                         {spectrumSelection.subtitle}

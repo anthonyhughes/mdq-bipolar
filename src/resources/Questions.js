@@ -137,7 +137,7 @@ export const Questions = [
         subtitle: '',
         // subtitle: 'if you checked YES to more than one of the above, have several of these ' +
         //     'ever happened during the same period of time?',
-        question: 'if you checked YES to more than one previous question, have several of these ' +
+        question: 'If you checked YES to more than one previous question, have several of these ' +
             'ever happened during the same period of time?',
         ynAnswers
     },
