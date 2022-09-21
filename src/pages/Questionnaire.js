@@ -1,6 +1,6 @@
 import '../App.css';
 import Question from "../components/Question";
-import {useContext, useState} from "react";
+import {useContext, useRef, useState} from "react";
 import {Questions} from "../resources/Questions";
 import ProgressSlider from "../components/ProgressSlider";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -9,8 +9,11 @@ import AllQuestionAnswersContext from "../contexts/AllQuestionAnswersContext"
 import Results from "./Results";
 
 function Questionnaire() {
+    const containerRef = useRef(null);
     const {allQuestionAnswers, setAllQuestionAnswers} = useContext(AllQuestionAnswersContext)
     const [currentQuestion, setCurrentQuestion] = useState(1);
+    const [slide, setSlide] = useState(true);
+    const [nextSlide, setNextSlide] = useState(false);
     const userCanMoveForward = (currentQuestion in allQuestionAnswers)
 
     const handleAnswerClick = (questionId, answerId) => {
@@ -29,6 +32,9 @@ function Questionnaire() {
         setCurrentQuestion(currentQuestion + 1)
     }
 
+    const question = Questions.filter((question, index) => index + 1 === currentQuestion)[0]
+    const nextQuestion = Questions.filter((question, index) => index + 2 === currentQuestion)[0]
+
     return (Object.keys(allQuestionAnswers).length === Questions.length ?
             <Results setCurrentQuestion={setCurrentQuestion}/> :
             <div className="App">
@@ -45,21 +51,17 @@ function Questionnaire() {
                                     flexWrap: 'wrap',
                                 }}
                             />
-                            {Questions
-                                .filter((question, index) => index + 1 === currentQuestion)
-                                .map((question, index) => {
-                                    return (
-                                        <Question
-                                            key={index}
-                                            title={question.title}
-                                            subtitle={question.subtitle}
-                                            question={question.question}
-                                            answers={'answers' in question ? question.answers : question.ynAnswers}
-                                            questionId={question.id}
-                                            handleAnswerClick={handleAnswerClick}
-                                        />
-                                    )
-                                })}
+                            {slide && <Question
+                                title={question.title}
+                                subtitle={question.subtitle}
+                                question={question.question}
+                                answers={'answers' in question ? question.answers : question.ynAnswers}
+                                questionId={question.id}
+                                handleAnswerClick={handleAnswerClick}
+                                slide
+                                ref={containerRef}
+                                containerRef={containerRef}
+                            />}
                             <ArrowForwardIosIcon
                                 onClick={handleForwardArrowClick}
                                 sx={{

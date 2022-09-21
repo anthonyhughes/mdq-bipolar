@@ -34,7 +34,6 @@
     padding-top: 0.5vh;
     font-size: calc(4px + 1vmin);
     font-weight: 250;
-    font-size: 1.25rem;
     color: white;
 }
 
@@ -141,8 +140,11 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     .Answers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 }
@@ -176,7 +178,8 @@
 }
 
 .Question-title {
-    padding-top: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     font-weight: 700;
     font-size: calc(30px + 2vmin);
 }
@@ -190,8 +193,8 @@
 
 .appHr {
     border: 2px solid rgb(245, 130, 28);
-    margin-left: calc(100px + 5vmin);
-    margin-right: calc(100px + 5vmin);
+    width: 50%;
+    margin: 0 auto;
 }
 
 .appVr {
@@ -214,5 +217,4 @@
 }
 
 .Question-Card {
-    min-width: calc(80vw - 200px);
 }

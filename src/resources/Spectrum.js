@@ -8,8 +8,9 @@ export const spectrum = [
     },
     {
         title: 'possible bipolar / depression',
-        subtitle: 'You may have bipolar or depression',
+        subtitle: 'You may have bipolar',
         answer: 'Thank you for completing the Mood Disorder Questionnaire.\n' +
-            '\n' + 'Your answers to the questions show it’s advisable for you to get a medical assessment for bipolar.',
+            '\n' +
+            'Your answers to the questions show it’s advisable for you to get a medical assessment for bipolar.',
     }
 ]
