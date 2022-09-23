@@ -55,8 +55,19 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(9px + 2vmin);
     color: black;
+}
+
+.App-indicators {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(9px + 2vmin);
+    color: black;
+    padding: 2%
 }
 
 .App-body-container {
@@ -203,11 +214,10 @@
 }
 
 .App-retake-text {
-    text-align: left;
     padding-top: 2vh;
-    padding-left: 5%;
     text-decoration: underline;
     cursor: pointer;
+    color: #0690e6;
 }
 
 .Question-Text {

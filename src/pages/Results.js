@@ -1,9 +1,12 @@
 import '../App.css';
 import {spectrum} from "../resources/Spectrum";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import AllQuestionAnswersContext from "../contexts/AllQuestionAnswersContext";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import CancelIcon from '@mui/icons-material/Cancel';
+import {Button} from "@mui/material";
+import {Questions} from "../resources/Questions";
+import Indicators from "./Indicators";
 
 const ICON_THEME = {
     fontSize: 120,
@@ -29,11 +32,8 @@ const generateTheme = (colour = "#F5821CFF") => {
 
 const calculateSpectrum = (allQuestionAnswers) => {
     const countOfYesAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 0).length;
-    // const countOfNoAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 1).length;
     const periodAnswer = allQuestionAnswers[14];
     const severityAnswer = allQuestionAnswers[15];
-    // const familyAnswer = allQuestionAnswers[16];
-    // const previousDiagnosisAnswer = allQuestionAnswers[17];
     if (countOfYesAnswers >= 7 && periodAnswer === 0 && severityAnswer >= 2) {
         return {
             spectrumResult: 1, // possible
@@ -51,15 +51,15 @@ function Results({setCurrentQuestion}) {
     const {allQuestionAnswers, setAllQuestionAnswers} = useContext(AllQuestionAnswersContext)
     const {spectrumResult, countOfYesAnswers} = calculateSpectrum(allQuestionAnswers)
     const spectrumSelection = spectrum[spectrumResult]
-    console.log(spectrumSelection)
+    const [displayAnswers, setDisplayAnswers] = useState(false);
 
-    const handleRetake = () => {
-        setCurrentQuestion(1)
-        setAllQuestionAnswers({})
-    }
-
-    return (
-        <div>
+    return (displayAnswers ?
+            <Indicators
+                setCurrentQuestion={setCurrentQuestion}
+                setAllQuestionAnswers={setAllQuestionAnswers}
+                setDisplayAnswers={setDisplayAnswers}
+                countOfYesAnswers={countOfYesAnswers}
+            /> :
             <div className="App">
                 <div className={"App-results"}>
                     <p>
@@ -82,25 +82,26 @@ function Results({setCurrentQuestion}) {
                                 }
                             />
                         }
-                        <div className={"appHr"}/>
-                        <p className={"App-body-slider-text"}>
-                            You selected {countOfYesAnswers} indicator(s) that may contribute towards the bipolar
-                            spectrum
-                        </p>
                         <div className={"App-results-spectrum-answer"}>
                             <p>
                                 {spectrumSelection.answer}
                             </p>
                         </div>
-                        <p
-                            className={"App-retake-text"}
-                            onClick={(event) => handleRetake()}>
-                            Take the Mood Disorder Questionnaire again
-                        </p>
+                        <Button
+                            // variant={"outlined"}
+                            variant="contained"
+                            color="primary"
+                            style={{ backgroundColor: '#F5821CFF' }}
+                            size={"large"}
+                            onClick={() => {
+                                setDisplayAnswers(true);
+                            }}
+                        >
+                            Next
+                        </Button>
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 
