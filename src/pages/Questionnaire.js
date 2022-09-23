@@ -7,6 +7,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import AllQuestionAnswersContext from "../contexts/AllQuestionAnswersContext"
 import Results from "./Results";
+import {calculateSpectrum} from "../utils/SpectrumUtils";
 
 function Questionnaire() {
     const containerRef = useRef(null);
@@ -33,9 +34,9 @@ function Questionnaire() {
     }
 
     const question = Questions.filter((question, index) => index + 1 === currentQuestion)[0]
-    const nextQuestion = Questions.filter((question, index) => index + 2 === currentQuestion)[0]
+    const {countOfNoAnswers} = calculateSpectrum(allQuestionAnswers)
 
-    return (Object.keys(allQuestionAnswers).length === Questions.length ?
+    return (Object.keys(allQuestionAnswers).length === Questions.length || countOfNoAnswers === 7?
             <Results setCurrentQuestion={setCurrentQuestion}/> :
             <div className="App">
                 <div className="App-body">

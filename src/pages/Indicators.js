@@ -19,7 +19,7 @@ function Indicators({setCurrentQuestion, setAllQuestionAnswers, setDisplayAnswer
                     <p>
                         If you answered positively to 7 or more of the first 13 questions,
                         you would have been asked some more questions. Your answers these questions determine whether
-                        ot not further medical assessment for bipolar is warranted.
+                        or not further medical assessment for bipolar is warranted.
                     </p>
                     <h1>
                         Your results

@@ -5,8 +5,8 @@ import AllQuestionAnswersContext from "../contexts/AllQuestionAnswersContext";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import CancelIcon from '@mui/icons-material/Cancel';
 import {Button} from "@mui/material";
-import {Questions} from "../resources/Questions";
 import Indicators from "./Indicators";
+import {calculateSpectrum} from "../utils/SpectrumUtils";
 
 const ICON_THEME = {
     fontSize: 120,
@@ -27,23 +27,6 @@ const generateTheme = (colour = "#F5821CFF") => {
     return {
         color: colour,
         ...ICON_THEME
-    }
-}
-
-const calculateSpectrum = (allQuestionAnswers) => {
-    const countOfYesAnswers = Object.values(allQuestionAnswers).splice(0, 13).filter((answer) => answer === 0).length;
-    const periodAnswer = allQuestionAnswers[14];
-    const severityAnswer = allQuestionAnswers[15];
-    if (countOfYesAnswers >= 7 && periodAnswer === 0 && severityAnswer >= 2) {
-        return {
-            spectrumResult: 1, // possible
-            countOfYesAnswers
-        }
-    } else {
-        return {
-            spectrumResult: 0, // possible
-            countOfYesAnswers
-        }
     }
 }
 
