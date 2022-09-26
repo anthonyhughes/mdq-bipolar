@@ -71,7 +71,8 @@ export const Questions = [
         title: 'question 7',
         // subtitle: '',
         subtitle: 'Has there ever been a period of time when you were not your usual self and...',
-        question: 'you were so easily distracted by things around you that you had trouble concentrating or staying on track?',
+        // question: 'you were so easily distracted by things around you that you had trouble concentrating or staying on track?',
+        question: 'you had much more energy than usual?',
         ynAnswers
     },
     {
@@ -80,7 +81,7 @@ export const Questions = [
         title: 'question 8',
         // subtitle: '',
         subtitle: 'Has there ever been a period of time when you were not your usual self and...',
-        question: 'you had much more energy than usual?',
+        question: 'you were much more interested in sex than usual?',
         ynAnswers
     },
     {
@@ -108,7 +109,9 @@ export const Questions = [
         title: 'question 11',
         // subtitle: '',
         subtitle: 'Has there ever been a period of time when you were not your usual self and...',
-        question: 'you were much more interested in sex than usual?',
+        // question: 'you were much more interested in sex than usual?',
+        question: 'you did things that were unusual for you or that other people might have ' +
+            'thought were excessive, foolish, or risky?',
         ynAnswers
     },
     {
@@ -117,8 +120,9 @@ export const Questions = [
         title: 'question 12',
         // subtitle: '',
         subtitle: 'Has there ever been a period of time when you were not your usual self and...',
-        question: 'you did things that were unusual for you or that other people might have ' +
-            'thought were excessive, foolish, or risky?',
+        // question: 'you did things that were unusual for you or that other people might have ' +
+        //     'thought were excessive, foolish, or risky?',
+        question: 'you spent money that got you or your family into trouble?',
         ynAnswers
     },
     {
@@ -127,7 +131,9 @@ export const Questions = [
         title: 'question 13',
         // subtitle: '',
         subtitle: 'Has there ever been a period of time when you were not your usual self and...',
-        question: 'spending money got you or your family into trouble?',
+        // question: 'spending money got you or your family into trouble?',
+        question: 'you were so easily distracted by things around you, that you ' +
+            'had trouble concentrating or staying on track?',
         ynAnswers
     },
     {
