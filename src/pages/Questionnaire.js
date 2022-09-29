@@ -45,7 +45,7 @@ function Questionnaire() {
                             <ArrowBackIosIcon
                                 onClick={handleBackArrowClick}
                                 sx={{
-                                    fontSize: 60,
+                                    fontSize: 50,
                                     color: (currentQuestion === 1)
                                         ? "#455b6e"
                                         : "#0690e6",
@@ -67,7 +67,7 @@ function Questionnaire() {
                             <ArrowForwardIosIcon
                                 onClick={handleForwardArrowClick}
                                 sx={{
-                                    fontSize: 60,
+                                    fontSize: 50,
                                     color: (userCanMoveForward)
                                         ? "#0690e6"
                                         : "#455b6e",
