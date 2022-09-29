@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mdq-bipolar/static/css/main.ac523590.css",
+    "main.css": "/mdq-bipolar/static/css/main.bd538f92.css",
     "main.js": "/mdq-bipolar/static/js/main.a0143416.js",
     "static/js/787.77c7e19d.chunk.js": "/mdq-bipolar/static/js/787.77c7e19d.chunk.js",
     "index.html": "/mdq-bipolar/index.html",
-    "main.ac523590.css.map": "/mdq-bipolar/static/css/main.ac523590.css.map",
+    "main.bd538f92.css.map": "/mdq-bipolar/static/css/main.bd538f92.css.map",
     "main.a0143416.js.map": "/mdq-bipolar/static/js/main.a0143416.js.map",
     "787.77c7e19d.chunk.js.map": "/mdq-bipolar/static/js/787.77c7e19d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac523590.css",
+    "static/css/main.bd538f92.css",
     "static/js/main.a0143416.js"
   ]
 }
