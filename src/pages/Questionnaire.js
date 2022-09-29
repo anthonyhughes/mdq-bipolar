@@ -50,6 +50,7 @@ function Questionnaire() {
                                         ? "#455b6e"
                                         : "#0690e6",
                                     flexWrap: 'wrap',
+                                    paddingLeft: '10px'
                                 }}
                             />
                             {slide && <Question
