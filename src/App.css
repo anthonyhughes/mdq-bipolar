@@ -57,9 +57,11 @@
     align-items: center;
     font-size: calc(9px + 2vmin);
     color: black;
+    padding-bottom: 5px;
 }
 
 .App-indicators {
+    background-color: #f6f8f8;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
@@ -98,7 +100,6 @@
 
 .App-body-slider {
     padding-top: 5vh;
-    padding-bottom: 2vh;
 }
 
 .App-body-slider:hover {
@@ -214,7 +215,6 @@
 }
 
 .App-retake-text {
-    padding-top: 2vh;
     text-decoration: underline;
     cursor: pointer;
     color: #0690e6;
